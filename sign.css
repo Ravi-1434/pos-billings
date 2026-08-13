@@ -1,0 +1,1391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Inter, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+
+        radial-gradient(circle at left,
+            rgba(0, 255, 255, .15),
+            transparent),
+
+        radial-gradient(circle at right,
+            rgba(255, 0, 255, .15),
+            transparent),
+
+        #01041e;
+
+    overflow: auto;
+
+    padding: 40px;
+
+}
+
+
+.signup-wrapper {
+
+    width: 100%;
+    max-width: 650px;
+
+}
+
+
+.signup-box {
+
+    background: rgba(0, 0, 40, .55);
+
+    backdrop-filter: blur(25px);
+
+    padding: 40px;
+
+    border-radius: 45px;
+
+    border: 2px solid transparent;
+
+    box-shadow:
+
+        0 0 25px #00e5ff,
+        0 0 60px rgba(255, 0, 255, .25);
+
+    border-image:
+        linear-gradient(90deg,
+            #00f7ff,
+            #884dff,
+            #ff00c8)1;
+
+}
+
+
+.logo-section {
+
+    text-align: center;
+    margin-bottom: 25px;
+
+}
+
+
+.logo {
+
+    width: 180px;
+    margin-bottom: 20px;
+
+}
+
+
+.logo-section h1 {
+
+    font-size: 48px;
+
+    font-weight: 800;
+
+    background:
+        linear-gradient(90deg,
+            #00ffff,
+            #ff4dff);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 10px;
+
+}
+
+
+.logo-section p {
+
+    color: #d8d8d8;
+    line-height: 1.7;
+
+    font-size: 18px;
+
+}
+
+
+.error-box {
+
+    display: none;
+
+    padding: 18px;
+
+    margin-bottom: 25px;
+
+    border-radius: 18px;
+
+    color: #ffa92c;
+
+    background: #28160f;
+
+    border: 1px solid #7f5424;
+
+}
+
+
+
+.input-group {
+
+    margin-bottom: 22px;
+
+}
+
+
+label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    background:
+        linear-gradient(90deg,
+            #00ffff,
+            #ff4dff);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+input,
+select {
+
+    width: 100%;
+
+    height: 62px;
+
+    border: none;
+
+    outline: none;
+
+    color: white;
+
+    padding: 18px;
+
+    font-size: 17px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(0, 0, 30, .7);
+
+    border: 1px solid #3c56ff;
+
+}
+
+
+input::placeholder {
+
+    color: #9e9e9e;
+
+}
+
+
+input:focus {
+
+    box-shadow:
+        0 0 15px #00ffff;
+
+}
+
+
+.phone-box,
+.password-box,
+.otp-box {
+
+    display: flex;
+    gap: 12px;
+
+}
+
+
+.phone-box select {
+
+    width: 30%;
+
+}
+
+
+.phone-box input {
+
+    width: 70%;
+
+}
+
+
+.password-box input,
+.otp-box input {
+
+    flex: 1;
+
+}
+
+
+#sendOtpBtn,
+#verifyOtpBtn {
+
+    border: none;
+
+    cursor: pointer;
+
+    padding: 0 22px;
+
+    font-weight: 700;
+
+    border-radius: 18px;
+
+    color: white;
+
+    background:
+        linear-gradient(90deg,
+            #00e7ff,
+            #ff00c8);
+
+}
+
+
+small {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: #d1d1d1;
+
+}
+
+
+.footer-text {
+
+    margin-top: 30px;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: 18px;
+
+}
+
+
+.footer-text a {
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    margin-left: 5px;
+
+    color: #ff55ff;
+
+}
+
+
+.signup-btn {
+
+    margin-top: 30px;
+
+    width: 100%;
+
+    height: 72px;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    border-radius: 25px;
+
+    color: white;
+
+    background:
+        linear-gradient(90deg,
+            #00e7ff,
+            #387bff,
+            #ff00d4);
+
+    box-shadow:
+
+        0 0 25px rgba(0, 255, 255, .6),
+
+        0 0 45px rgba(255, 0, 255, .5);
+
+    transition: .3s;
+
+}
+
+
+.signup-btn:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+.background-circle {
+
+    position: fixed;
+    border-radius: 50%;
+
+    filter: blur(30px);
+
+}
+
+
+.one {
+
+    width: 180px;
+    height: 180px;
+
+    background: #00ffff;
+
+    top: 80px;
+    left: -40px;
+
+    opacity: .25;
+
+}
+
+
+.two {
+
+    width: 220px;
+    height: 220px;
+
+    background: #ff00ff;
+
+    right: -70px;
+    top: 200px;
+
+    opacity: .2;
+
+}
+
+
+.three {
+
+    width: 170px;
+    height: 170px;
+
+    background: #00ffff;
+
+    bottom: -50px;
+    left: -40px;
+
+    opacity: .18;
+
+}
+
+
+.caps-warning {
+
+    display: none;
+
+    color: #ffca63;
+
+}
+
+
+@media(max-width:768px) {
+
+    .signup-box {
+
+        padding: 30px;
+
+    }
+
+    .logo-section h1 {
+
+        font-size: 35px;
+
+    }
+
+    .phone-box,
+    .password-box,
+    .otp-box {
+
+        flex-direction: column;
+
+    }
+
+    .phone-box select,
+    .phone-box input {
+
+        width: 100%;
+
+    }
+
+}
+
+/*==========================
+      TABLET RESPONSIVE
+==========================*/
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px;
+        overflow-x: hidden;
+    }
+
+    .signup-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .signup-box {
+        padding: 30px 25px;
+        border-radius: 30px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .logo-section h1 {
+        font-size: 32px;
+    }
+
+    .logo-section p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    input,
+    select {
+        height: 58px;
+        font-size: 16px;
+    }
+
+    .signup-btn {
+        height: 65px;
+        font-size: 26px;
+    }
+
+}
+
+
+/*==========================
+      MOBILE RESPONSIVE
+==========================*/
+
+@media (max-width: 575px) {
+
+    body {
+        padding: 15px;
+        overflow-x: hidden;
+    }
+
+    .signup-box {
+
+        width: 100%;
+        padding: 25px 20px;
+        border-radius: 28px;
+
+    }
+
+
+    /* Logo */
+
+    .logo {
+        width: 130px;
+    }
+
+
+    .logo-section h1 {
+
+        font-size: 28px;
+        line-height: 1.3;
+
+    }
+
+
+    .logo-section p {
+
+        font-size: 15px;
+        line-height: 1.7;
+
+    }
+
+
+
+    /* Labels */
+
+    label {
+
+        font-size: 15px;
+
+    }
+
+
+    /* Inputs */
+
+    input,
+    select {
+
+        height: 55px;
+        font-size: 15px;
+        padding: 15px;
+
+    }
+
+
+
+    /* Make all flex items become column */
+
+    .phone-box,
+    .otp-box,
+    .password-box {
+
+        flex-direction: column;
+        gap: 10px;
+
+    }
+
+
+    .phone-box select,
+    .phone-box input {
+
+        width: 100%;
+
+    }
+
+
+
+    /* OTP Buttons */
+
+    #sendOtpBtn,
+    #verifyOtpBtn {
+
+        width: 100%;
+        height: 55px;
+        font-size: 16px;
+
+    }
+
+
+
+    /* Eye Button */
+
+    .eye-btn {
+
+        width: 100%;
+        height: 55px;
+        font-size: 20px;
+
+    }
+
+
+
+    /* Footer */
+
+    .footer-text {
+
+        font-size: 16px;
+        line-height: 1.8;
+
+    }
+
+
+
+    /* Signup Button */
+
+    .signup-btn {
+
+        height: 60px;
+        font-size: 24px;
+
+    }
+
+
+    small {
+
+        line-height: 1.7;
+
+    }
+
+
+}
+
+
+
+/*==========================
+      SMALL MOBILE
+      (325px - 375px)
+==========================*/
+
+
+@media (max-width: 375px) {
+
+
+    body {
+
+        padding: 12px;
+
+    }
+
+
+    .signup-box {
+
+        padding: 20px 15px;
+
+    }
+
+
+    .logo {
+
+        width: 115px;
+
+    }
+
+
+    .logo-section h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .logo-section p {
+
+        font-size: 14px;
+
+    }
+
+
+
+    input,
+    select {
+
+        height: 52px;
+        font-size: 14px;
+        padding: 14px;
+
+    }
+
+
+    label {
+
+        font-size: 14px;
+
+    }
+
+
+
+    .signup-btn {
+
+        height: 55px;
+        font-size: 22px;
+
+    }
+
+
+
+    #sendOtpBtn,
+    #verifyOtpBtn {
+
+        height: 52px;
+
+    }
+
+
+    .eye-btn {
+
+        height: 52px;
+
+    }
+
+
+    .footer-text {
+
+        font-size: 15px;
+
+    }
+
+
+}
+
+
+/*==========================
+     OVERFLOW PROTECTION
+==========================*/
+
+
+html,
+body {
+
+    width: 100%;
+    overflow-x: hidden;
+
+}
+
+
+* {
+
+    max-width: 100%;
+
+}
+
+
+img {
+
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+
+/* Prevent long text breaking UI */
+
+p,
+small,
+label {
+
+    word-wrap: break-word;
+
+}
+
+
+/* Prevent input overflow */
+
+input,
+select,
+button {
+
+    min-width: 0;
+
+}
+
+
+/* Better spacing */
+
+.input-group {
+
+    margin-bottom: 18px;
+
+}
+
+/* Password eye icon inside input box */
+
+.password-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+.password-box input {
+    width: 100%;
+    padding-right: 55px;
+    /* space for eye icon */
+}
+
+
+.eye-btn {
+
+    position: absolute;
+
+    right: 18px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: auto;
+    height: auto;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    padding: 0;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+}
+
+
+.eye-btn:hover {
+
+    background: transparent;
+
+    transform: translateY(-50%) scale(1.1);
+
+}
+
+/*=================================
+      FINAL RESPONSIVE COMPACT UI
+=================================*/
+
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+
+    .signup-box {
+
+        padding: 25px 20px;
+        border-radius: 25px;
+
+    }
+
+
+    .logo-section h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .logo-section p {
+
+        font-size: 15px;
+
+    }
+
+
+    label {
+
+        font-size: 14px;
+        margin-bottom: 7px;
+
+    }
+
+
+    .input-group {
+
+        margin-bottom: 15px;
+
+    }
+
+
+    input,
+    select {
+
+        height: 48px;
+        font-size: 14px;
+        padding: 12px 15px;
+        border-radius: 15px;
+
+    }
+
+
+    small {
+
+        font-size: 12px;
+
+    }
+
+
+
+    /* Phone dropdown fix */
+
+    .phone-box select {
+
+        width: 100%;
+        margin-left: 0;
+
+    }
+
+
+
+    .phone-box {
+
+        gap: 8px;
+
+    }
+
+
+
+    /* OTP section */
+
+    .otp-box {
+
+        gap: 8px;
+
+    }
+
+
+    #sendOtpBtn,
+    #verifyOtpBtn {
+
+        height: 45px;
+        padding: 0 15px;
+        font-size: 13px;
+        border-radius: 14px;
+
+    }
+
+
+
+    /* Password eye */
+
+    .eye-btn {
+
+        font-size: 18px;
+        right: 12px;
+
+    }
+
+
+
+    .footer-text {
+
+        font-size: 14px;
+
+    }
+
+
+
+    .signup-btn {
+
+        height: 55px;
+        font-size: 22px;
+        border-radius: 18px;
+        margin-top: 20px;
+
+    }
+
+}
+
+
+
+
+/* Mobile */
+
+@media (max-width:575px) {
+
+
+    body {
+
+        padding: 10px;
+
+    }
+
+
+    .signup-wrapper {
+
+        width: 100%;
+
+    }
+
+
+
+    .signup-box {
+
+        padding: 20px 15px;
+        border-radius: 22px;
+
+    }
+
+
+
+    .logo-section {
+
+        margin-bottom: 18px;
+
+    }
+
+
+
+    .logo-section h1 {
+
+        font-size: 24px;
+
+    }
+
+
+
+    .logo-section p {
+
+        font-size: 13px;
+
+    }
+
+
+
+    label {
+
+        font-size: 13px;
+
+    }
+
+
+
+    input,
+    select {
+
+        height: 45px;
+        font-size: 13px;
+        border-radius: 14px;
+
+    }
+
+
+
+    .input-group {
+
+        margin-bottom: 12px;
+
+    }
+
+
+
+
+
+
+
+    #sendOtpBtn,
+    #verifyOtpBtn {
+
+
+        width: 100%;
+        height: 42px;
+        font-size: 13px;
+        border-radius: 12px;
+
+    }
+
+
+
+    .otp-box,
+    .password-box,
+    .phone-box {
+
+        gap: 8px;
+
+    }
+
+
+
+    .eye-btn {
+
+        font-size: 16px;
+        right: 10px;
+
+    }
+
+
+
+    small {
+
+        font-size: 11px;
+
+    }
+
+
+
+    .footer-text {
+
+        font-size: 13px;
+
+        margin-top: 18px;
+
+    }
+
+
+
+    .signup-btn {
+
+        height: 50px;
+
+        font-size: 20px;
+
+        border-radius: 15px;
+
+        margin-top: 18px;
+
+    }
+
+
+}
+
+
+
+
+/* Very Small Mobile */
+
+@media (max-width:375px) {
+
+
+    .signup-box {
+
+        padding: 18px 12px;
+
+    }
+
+
+
+    .logo-section h1 {
+
+        font-size: 21px;
+
+    }
+
+
+
+    .logo-section p {
+
+        font-size: 12px;
+
+    }
+
+
+
+    label {
+
+        font-size: 12px;
+
+    }
+
+
+
+    input,
+    select {
+
+        height: 42px;
+
+        font-size: 12px;
+
+        padding: 10px;
+
+    }
+
+
+
+    #sendOtpBtn,
+    #verifyOtpBtn {
+
+        height: 40px;
+
+        font-size: 12px;
+
+    }
+
+
+
+    .signup-btn {
+
+        height: 45px;
+
+        font-size: 18px;
+
+    }
+
+
+}
+
+/* Validation Message Styling */
+
+.error-box {
+    display: none;
+    padding: 15px 18px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffcc00;
+    background: rgba(255, 165, 0, 0.12);
+    border: 1px solid #ff9900;
+}
+
+
+/* Success message */
+
+.success-box {
+
+    display: block;
+    padding: 15px 18px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #00ff99;
+    background: rgba(0, 255, 150, 0.12);
+    border: 1px solid #00ff99;
+
+}
+
+
+/* Invalid input glow */
+
+input.invalid {
+
+    border: 1px solid #ff4444;
+
+    box-shadow:
+        0 0 15px rgba(255, 0, 0, 0.7);
+
+}
+
+
+/* Valid input glow */
+
+input.valid {
+
+    border: 1px solid #00ff99;
+
+    box-shadow:
+        0 0 15px rgba(0, 255, 150, 0.7);
+
+}
+
+
+/* Disabled buttons */
+
+button:disabled {
+
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+}
+
+/* ===========================
+   CUSTOM POPUP MESSAGE
+=========================== */
+
+
+.popup-message {
+
+    position: fixed;
+
+    top: 10%;
+
+    left: 50%;
+
+    transform: translate(-50%, -10px);
+
+    min-width: 320px;
+
+    max-width: 90%;
+
+    padding: 14px 25px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    color: white;
+
+    background: rgba(0, 0, 40, 0.90);
+
+    border: 1px solid #00ffff;
+
+    box-shadow:
+
+        0 0 20px #00ffff,
+        0 0 35px rgba(255, 0, 200, .4);
+
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .35s ease;
+
+    z-index: 9999;
+
+}
+
+
+/* Show popup */
+
+.popup-message.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translate(-50%, 0);
+
+}
+
+
+/* Success */
+
+.popup-success {
+
+    border-color: #00ff99;
+
+    box-shadow:
+
+        0 0 20px #00ff99;
+
+}
+
+
+/* Error */
+
+.popup-error {
+
+    border-color: #ff4444;
+
+    box-shadow:
+
+        0 0 20px #ff4444;
+
+}
+
+
+/* Warning */
+
+.popup-warning {
+
+    border-color: #ffcc00;
+
+    box-shadow:
+
+        0 0 20px #ffcc00;
+
+}
+
+/* Disabled Fields */
+
+input:disabled,
+select:disabled,
+button:disabled {
+
+    opacity: .5;
+    cursor: not-allowed;
+
+}

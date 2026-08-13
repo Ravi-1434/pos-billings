@@ -1,0 +1,1206 @@
+/*========================================
+            GOOGLE FONT
+========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+
+/*========================================
+                RESET
+========================================*/
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    background: #05071b;
+
+    color: white;
+
+    position: relative;
+
+}
+
+
+
+/*========================================
+            BACKGROUND GLOW
+========================================*/
+
+
+body::before {
+
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -10;
+
+
+    background:
+
+        radial-gradient(circle at left,
+            #081a5b 0%,
+            transparent 35%),
+
+
+        radial-gradient(circle at right,
+            #3a045f 0%,
+            transparent 35%),
+
+
+        linear-gradient(135deg,
+            #020617,
+            #05071b,
+            #040316);
+
+
+
+}
+
+
+
+
+.sales-container {
+
+
+    width: 95%;
+
+    max-width: 1700px;
+
+    margin: auto;
+
+    padding: 40px 20px;
+
+
+}
+
+
+
+
+
+
+/*========================================
+                HEADER
+========================================*/
+
+
+.sales-header {
+
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+
+    padding: 30px;
+
+
+    border-radius: 35px;
+
+
+    background:
+
+        rgba(4, 6, 28, .85);
+
+
+    backdrop-filter: blur(25px);
+
+
+
+    border:
+
+        2px solid rgba(255, 255, 255, .08);
+
+
+
+    box-shadow:
+
+
+        0 0 25px rgba(0, 191, 255, .25),
+
+        0 0 45px rgba(170, 0, 255, .18);
+
+
+
+    margin-bottom: 35px;
+
+
+}
+
+
+
+
+
+.header-left h1 {
+
+
+    font-size: 42px;
+
+
+    background:
+
+        linear-gradient(90deg,
+            #18e7ff,
+            #4bb4ff,
+            #9a6cff,
+            #ff4dd9);
+
+
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+
+}
+
+
+
+
+
+.header-left p {
+
+
+    color: #c5c8d8;
+
+    margin-top: 8px;
+
+
+}
+
+
+
+
+
+
+
+/*========================================
+                BUTTONS
+========================================*/
+
+
+button {
+
+
+    border: none;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-weight: 600;
+
+    transition: .4s;
+
+
+}
+
+
+
+button:hover {
+
+
+    transform: translateY(-4px);
+
+
+    box-shadow:
+
+        0 0 20px rgba(0, 191, 255, .40);
+
+
+}
+
+
+
+
+.btn-back,
+.btn-add,
+.btn-save,
+.btn-invoice,
+.btn-print,
+.btn-draft,
+.btn-clear {
+
+
+    padding: 15px 30px;
+
+
+    border-radius: 15px;
+
+
+    font-size: 15px;
+
+
+}
+
+
+
+
+
+.btn-back {
+
+
+    background:
+
+        linear-gradient(90deg,
+            #18e7ff,
+            #9a6cff);
+
+
+}
+
+
+
+
+
+.btn-add {
+
+
+    background:
+
+        linear-gradient(90deg,
+            #18e7ff,
+            #9a6cff);
+
+
+}
+
+
+
+
+
+
+
+/*========================================
+                GLASS CARDS
+========================================*/
+
+
+.card {
+
+
+    padding: 30px;
+
+
+    border-radius: 30px;
+
+
+    background:
+
+        rgba(4, 6, 28, .85);
+
+
+    backdrop-filter: blur(25px);
+
+
+
+    border:
+
+        2px solid rgba(255, 255, 255, .08);
+
+
+
+    margin-bottom: 30px;
+
+
+}
+
+
+
+
+
+
+
+/*========================================
+                TITLE
+========================================*/
+
+
+.section-title {
+
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+
+    margin-bottom: 25px;
+
+
+
+    background:
+
+        linear-gradient(90deg,
+            #18e7ff,
+            #9a6cff,
+            #ff4dd9);
+
+
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+
+}
+
+
+
+
+
+
+
+/*========================================
+                FORM
+========================================*/
+
+
+.form-grid {
+
+
+    display: grid;
+
+
+    grid-template-columns:
+
+        repeat(2, 1fr);
+
+
+    gap: 25px;
+
+
+}
+
+
+
+
+.form-group {
+
+
+    display: flex;
+
+    flex-direction: column;
+
+
+}
+
+
+
+
+
+label {
+
+
+    color: #c5c8d8;
+
+
+    font-size: 13px;
+
+
+    margin-bottom: 8px;
+
+
+}
+
+
+
+
+input,
+select,
+textarea {
+
+
+    height: 55px;
+
+
+    border: none;
+
+
+    outline: none;
+
+
+    border-radius: 18px;
+
+
+    padding: 0 20px;
+
+
+    color: white;
+
+
+    font-size: 15px;
+
+
+
+    background:
+
+        rgba(255, 255, 255, .08);
+
+
+}
+
+
+
+
+textarea {
+
+
+    height: 100px;
+
+    padding-top: 15px;
+
+    resize: none;
+
+
+}
+
+
+
+
+input::placeholder {
+
+
+    color: #aaa;
+
+
+}
+
+
+
+select option {
+
+
+    color: black;
+
+
+}
+
+
+
+
+
+.full-width {
+
+
+    grid-column: 1/-1;
+
+
+}
+
+
+
+
+
+
+
+/*========================================
+                CUSTOMER
+========================================*/
+
+
+.customer-search {
+
+
+    margin-bottom: 25px;
+
+
+}
+
+
+
+
+
+
+
+
+/*========================================
+                PRODUCT TABLE
+========================================*/
+
+
+.table-header {
+
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+
+}
+
+
+
+
+.table-wrapper {
+
+
+    overflow: auto;
+
+
+    border-radius: 30px;
+
+
+    background:
+
+        rgba(4, 6, 28, .85);
+
+
+
+    padding: 25px;
+
+
+}
+
+
+
+
+.product-table {
+
+
+    width: 100%;
+
+    min-width: 1200px;
+
+    border-collapse: collapse;
+
+
+}
+
+
+
+.product-table thead {
+
+
+    background:
+
+        linear-gradient(90deg,
+            #18e7ff,
+            #9a6cff);
+
+
+}
+
+
+
+
+
+.product-table th {
+
+
+    padding: 20px;
+
+    text-align: left;
+
+
+}
+
+
+
+.product-table td {
+
+
+    padding: 18px;
+
+
+    border-bottom:
+
+        1px solid rgba(255, 255, 255, .08);
+
+
+}
+
+
+
+
+
+.product-table tbody tr:hover {
+
+
+    background:
+
+        rgba(255, 255, 255, .04);
+
+
+}
+
+
+
+
+
+
+.product-table input,
+.product-table select {
+
+
+    height: 45px;
+
+
+}
+
+
+
+
+
+
+.remove-btn {
+
+
+    padding: 10px 18px;
+
+
+    border-radius: 12px;
+
+
+    background:
+
+        linear-gradient(90deg,
+            #ff4d4d,
+            #ff23c6);
+
+
+}
+
+
+
+
+
+
+
+/*========================================
+                SUMMARY
+========================================*/
+
+
+.summary-box {
+
+
+    margin-left: auto;
+
+    width: 450px;
+
+
+}
+
+
+
+.summary-box div {
+
+
+    display: flex;
+
+    justify-content: space-between;
+
+
+    padding: 18px;
+
+
+    background:
+
+        rgba(255, 255, 255, .05);
+
+
+    margin-bottom: 10px;
+
+
+    border-radius: 15px;
+
+
+}
+
+
+
+
+.summary-box span {
+
+
+    color: #c5c8d8;
+
+
+}
+
+
+
+
+.summary-box strong {
+
+
+    color: #18e7ff;
+
+
+}
+
+
+
+
+
+.grand-total {
+
+
+    background:
+
+        linear-gradient(90deg,
+            rgba(24, 231, 255, .15),
+            rgba(154, 108, 255, .15)) !important;
+
+
+}
+
+
+
+
+
+.grand-total strong {
+
+
+    font-size: 25px;
+
+
+}
+
+
+
+
+
+
+
+/*========================================
+                FOOTER
+========================================*/
+
+
+.sales-footer {
+
+
+    display: flex;
+
+
+    justify-content: flex-end;
+
+
+    flex-wrap: wrap;
+
+
+    gap: 15px;
+
+
+    padding: 25px;
+
+
+    border-radius: 30px;
+
+
+    background:
+
+        rgba(4, 6, 28, .85);
+
+
+    backdrop-filter: blur(25px);
+
+
+
+    border:
+
+        2px solid rgba(255, 255, 255, .08);
+
+
+}
+
+
+
+
+
+.btn-clear {
+
+
+    background:
+
+        linear-gradient(90deg,
+            #555,
+            #777);
+
+
+}
+
+
+
+
+.btn-draft {
+
+
+    background:
+
+        linear-gradient(90deg,
+            #9a6cff,
+            #ff4dd9);
+
+
+}
+
+
+
+
+.btn-save {
+
+
+    background:
+
+        linear-gradient(90deg,
+            #13d96b,
+            #18e7ff);
+
+
+}
+
+
+
+
+.btn-invoice {
+
+
+    background:
+
+        linear-gradient(90deg,
+            #ff4dd9,
+            #9a6cff);
+
+
+}
+
+
+
+
+
+.btn-print {
+
+
+    background:
+
+        linear-gradient(90deg,
+            #18e7ff,
+            #9a6cff);
+
+
+}
+
+
+
+
+
+
+
+
+/*========================================
+            RESPONSIVE
+========================================*/
+
+
+@media(max-width:992px) {
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .sales-header {
+
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+
+    }
+
+
+
+
+    .summary-box {
+
+
+        width: 100%;
+
+
+    }
+
+
+
+    .sales-footer button {
+
+
+        width: 100%;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+@media(max-width:768px) {
+
+
+
+    .header-left h1 {
+
+
+        font-size: 32px;
+
+
+    }
+
+
+
+    .card {
+
+
+        padding: 20px;
+
+
+    }
+
+
+
+    .section-title {
+
+
+        font-size: 21px;
+
+
+    }
+
+
+
+}
+
+/*========================================
+            CUSTOM ERP POPUP
+========================================*/
+
+
+.popup-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, .65);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+}
+
+
+
+.popup-box {
+
+
+    width: 420px;
+
+    padding: 35px;
+
+
+    border-radius: 30px;
+
+
+    background:
+
+        rgba(4, 6, 28, .90);
+
+
+    backdrop-filter: blur(25px);
+
+
+
+    border:
+
+        2px solid rgba(255, 255, 255, .08);
+
+
+
+    box-shadow:
+
+
+        0 0 30px rgba(24, 231, 255, .35),
+
+        0 0 50px rgba(154, 108, 255, .25);
+
+
+
+    text-align: center;
+
+
+}
+
+
+
+.popup-box h3 {
+
+
+    font-size: 26px;
+
+
+    margin-bottom: 15px;
+
+
+    background:
+
+        linear-gradient(90deg,
+            #18e7ff,
+            #9a6cff,
+            #ff4dd9);
+
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+
+}
+
+
+
+.popup-box p {
+
+
+    color: #c5c8d8;
+
+    margin-bottom: 30px;
+
+    font-size: 16px;
+
+
+}
+
+
+
+.popup-buttons {
+
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+
+}
+
+
+
+.popup-buttons button {
+
+
+    min-width: 120px;
+
+
+}
+
+/*========================================
+            PRINT SETTINGS
+========================================*/
+
+@media print {
+
+    body {
+        background: #05071b !important;
+        color: white !important;
+
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    body::before {
+        display: block !important;
+    }
+
+    .sales-header,
+    .card,
+    .sales-footer,
+    .popup-box {
+
+        background: rgba(4, 6, 28, .85) !important;
+        color: white !important;
+
+        border: 2px solid rgba(255, 255, 255, .08) !important;
+
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    h1,
+    h2,
+    label,
+    p,
+    span,
+    strong,
+    td,
+    th {
+        color: white !important;
+    }
+
+    .product-table thead {
+
+        background: linear-gradient(90deg, #18e7ff, #9a6cff) !important;
+
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    button {
+        display: none;
+    }
+
+}

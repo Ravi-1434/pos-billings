@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sales Dashboard</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="dash.css">
+
+</head>
+
+<body>
+    <aside class="sidebar">
+
+        <h2 class="logo">
+            Stackly
+        </h2>
+
+
+        <ul class="side-menu">
+
+            <li>
+                <a href="index.html" class="side-active">
+                    Dashboard
+                </a>
+            </li>
+
+
+            <li>
+                <a href="product.html">
+                    Product
+                </a>
+            </li>
+
+
+            <li>
+                <a href="comt.html">
+                    Customer
+                </a>
+            </li>
+
+
+            <li>
+                <a href="sales.html">
+                    Sales
+                </a>
+            </li>
+
+
+            <li>
+                <a href="invoice.html">
+                    Invoice
+                </a>
+            </li>
+
+        </ul>
+
+
+
+        <button class="side-profile" id="profileBtn">
+
+            Profile
+
+        </button>
+
+
+    </aside>
+    <main class="dashboard">
+
+        <!--======================
+                NAVBAR
+        =======================-->
+
+        <nav class="navbar">
+
+            <div class="nav-left">
+
+                <ul class="menu">
+
+                    <li>
+                        <a href="#" class="active">
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="product.html" id="productsBtn">Product</a>
+                    </li>
+
+                    <li>
+                        <a href="comt.html" id="customersBtn">Customers</a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="nav-right">
+
+                <!-- Search -->
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text" id="searchInput" placeholder="Search dashboard...">
+
+                </div>
+
+
+                <!-- Notification -->
+                <div class="notification-wrapper">
+
+                    <button class="icon-btn" id="notificationBtn">
+                        <i class="fa-regular fa-bell"></i>
+                    </button>
+
+                </div>
+
+
+                <!-- Profile -->
+
+                <button class="profile-btn" id="profileBtn">
+
+                    <i class="fa-solid fa-user"></i>
+                    profile
+                </button>
+
+            </div>
+
+        </nav>
+
+
+
+        <!--======================
+                TITLE
+        =======================-->
+
+        <div class="heading">
+
+            <h1>
+                Sales Performance
+            </h1>
+
+            <p>
+                Track, analyse and optimise your business performance
+                with real-time insights.
+            </p>
+
+        </div>
+
+
+
+        <!--======================
+                CARDS
+        =======================-->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <h3>Total Revenue</h3>
+
+                <h2>£950,000</h2>
+
+                <span>
+                    +12.5% from previous month
+                </span>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Sales Pipeline</h3>
+
+                <h2>£245,000</h2>
+
+                <span>
+                    +15% from previous month
+                </span>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Average Revenue</h3>
+
+                <h2>£200</h2>
+
+                <span>
+                    Monthly Growth +5%
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!--======================
+                CHART
+        =======================-->
+
+        <section class="chart-card">
+
+            <div class="card-title">
+
+                <h2>
+                    Sales Target vs Actual Performance
+                </h2>
+
+            </div>
+
+            <canvas id="salesChart"></canvas>
+
+        </section>
+
+
+
+        <!--======================
+              BOTTOM SECTION
+        =======================-->
+
+        <section class="bottom-grid">
+
+            <div class="small-card">
+
+                <h2>Profit Margin</h2>
+
+                <h1>+40%</h1>
+
+                <p>
+                    Better than previous month.
+                </p>
+
+            </div>
+
+
+            <div class="small-card">
+
+                <h2>Revenue Growth</h2>
+
+                <h1>+21%</h1>
+
+                <p>
+                    Strong business performance.
+                </p>
+
+            </div>
+
+
+            <div class="small-card">
+
+                <h2>Online Store</h2>
+
+                <h1>£100,000</h1>
+
+                <p>
+                    Highest selling channel.
+                </p>
+
+            </div>
+
+
+            <div class="small-card">
+
+                <h2>Physical Store</h2>
+
+                <h1>£50,000</h1>
+
+                <p>
+                    Monthly performance report.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Chart JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- JS -->
+
+    <script src="dash.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background:
+                linear-gradient(135deg,
+                    #081128,
+                    #101d47,
+                    #191541,
+                    #250d38,
+                    #081128);
+
+            color: white;
+
+        }
+
+
+        .profile-card {
+
+            width: 450px;
+            padding: 35px;
+            border-radius: 30px;
+
+            background:
+                rgba(4, 6, 28, .85);
+
+            backdrop-filter: blur(20px);
+
+            border: 2px solid rgba(75, 120, 255, .25);
+
+            box-shadow:
+                0 0 35px rgba(0, 170, 255, .18);
+
+            text-align: center;
+
+        }
+
+
+        .profile-image {
+
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 45px;
+
+            background:
+                linear-gradient(90deg,
+                    #19dfff,
+                    #4f8eff,
+                    #a447ff,
+                    #ff20c8);
+
+        }
+
+
+        h1 {
+
+            margin-top: 20px;
+            font-size: 30px;
+
+        }
+
+
+        .role {
+
+            margin-top: 5px;
+            color: #c5c8d8;
+
+        }
+
+
+        .info {
+
+            margin-top: 30px;
+            text-align: left;
+
+        }
+
+
+        .info-box {
+
+            padding: 18px;
+            margin-bottom: 15px;
+            border-radius: 18px;
+
+            background:
+                rgba(255, 255, 255, .05);
+
+        }
+
+
+        .info-box h3 {
+
+            font-size: 15px;
+            color: #18e7ff;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .info-box p {
+
+            color: #ffffff;
+
+        }
+
+
+        .buttons {
+
+            margin-top: 25px;
+
+            display: grid;
+            gap: 15px;
+
+        }
+
+
+        button {
+
+            height: 50px;
+            border: none;
+            border-radius: 30px;
+
+            font-size: 15px;
+            font-weight: 600;
+
+            cursor: pointer;
+            transition: .3s;
+
+            color: white;
+
+            background:
+                linear-gradient(90deg,
+                    #19dfff,
+                    #a447ff,
+                    #ff20c8);
+
+        }
+
+
+        button:hover {
+
+            transform: translateY(-3px);
+
+        }
+
+
+        .back-btn {
+
+            background:
+                rgba(255, 255, 255, .08);
+
+        }
+
+        .help-section {
+
+            display: none;
+
+            margin-top: 20px;
+
+            padding: 20px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255, 255, 255, .05);
+
+        }
+
+        body {
+
+            display: flex;
+            gap: 30px;
+
+        }
+
+
+        .help-panel {
+
+            width: 350px;
+
+            padding: 25px;
+
+            border-radius: 25px;
+
+            background:
+                rgba(4, 6, 28, .85);
+
+            backdrop-filter: blur(20px);
+
+            border: 2px solid rgba(75, 120, 255, .25);
+
+            display: none;
+
+        }
+
+
+        .help-panel h2 {
+
+            margin-bottom: 20px;
+            color: #19dfff;
+
+        }
+
+
+
+        .data-card {
+
+            padding: 18px;
+
+            margin-bottom: 15px;
+
+            border-radius: 18px;
+
+            cursor: pointer;
+
+            background:
+                rgba(255, 255, 255, .08);
+
+            transition: .3s;
+
+        }
+
+
+        .data-card:hover {
+
+            transform: translateX(8px);
+
+            background:
+                rgba(25, 223, 255, .15);
+
+        }
+
+
+
+        .data-card h3 {
+
+            color: #ff20c8;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .data-card p {
+
+            color: white;
+
+            font-size: 14px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="profile-card">
+
+        <div class="profile-image">
+
+            <i class="fa-solid fa-user"></i>
+
+        </div>
+
+
+        <h1>Ravi </h1>
+
+        <p class="role">
+            Admin
+        </p>
+
+
+        <div class="info">
+
+
+
+
+
+
+            <div class="info-box">
+
+                <h3>Account Status</h3>
+                <p>Active</p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="buttons">
+
+
+            <button onclick="openHelp()">
+                Help
+            </button>
+
+            <button onclick="logout()">
+                Logout
+            </button>
+
+            <button class="back-btn" onclick="goDashboard()">
+                Back to Dashboard
+            </button>
+
+        </div>
+
+
+    </div>
+    <div class="help-panel" id="helpPanel">
+
+        <h2>
+            <i class="fa-solid fa-chart-line"></i>
+            Business Overview
+        </h2>
+
+
+        <div class="data-card" onclick="openPage('sales.html')">
+
+            <h3>Sales</h3>
+            <p>Total Sales: ₹5,40,000</p>
+            <p>Orders: 120</p>
+
+        </div>
+
+
+        <div class="data-card" onclick="openPage('customer.html')">
+
+            <h3>Customers</h3>
+            <p>Total Customers: 350</p>
+            <p>New Customers: 25</p>
+
+        </div>
+
+
+        <div class="data-card" onclick="openPage('product.html')">
+
+            <h3>Products</h3>
+            <p>Total Products: 85</p>
+            <p>Stock Available: 560</p>
+
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        function openSettings() {
+
+            alert(
+                "Settings Page\n\nYou can customise:\n\n- Dashboard Theme\n- Colours\n- Notifications\n- Chart Animations"
+            );
+
+        }
+
+
+
+
+        function openHelp() {
+
+            const helpBox =
+                document.getElementById("helpSection");
+
+
+            if (helpBox.style.display === "block") {
+
+                helpBox.style.display = "none";
+
+            }
+
+            else {
+
+                helpBox.style.display = "block";
+
+            }
+
+        }
+
+        function logout() {
+
+            if (confirm("Are you sure you want to logout?")) {
+
+                window.location.href = "login.html";
+
+            }
+
+        }
+
+
+        function goDashboard() {
+
+            window.location.href = "dashboard.html";
+
+        }
+        const email = document.getElementById("email").value;
+
+        // Login successful
+        localStorage.setItem("userEmail", email);
+
+        window.location.href = "index.html";
+        function openHelp() {
+
+            const panel = document.getElementById("helpPanel");
+
+
+            if (panel.style.display === "block") {
+
+                panel.style.display = "none";
+
+            }
+
+            else {
+
+                panel.style.display = "block";
+
+            }
+
+        }
+    </script>
+
+
+</body>
+
+</html>

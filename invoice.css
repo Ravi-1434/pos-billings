@@ -1,0 +1,1130 @@
+/*========================================
+            GOOGLE FONT
+========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+
+/*========================================
+                RESET
+========================================*/
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+
+body {
+
+
+    font-family: 'Poppins', sans-serif;
+
+
+    min-height: 100vh;
+
+
+    background: #05071b;
+
+
+    color: white;
+
+
+    overflow-x: hidden;
+
+
+}
+
+
+
+
+
+/*========================================
+            BACKGROUND GLOW
+========================================*/
+
+
+body::before {
+
+
+    content: "";
+
+
+    position: fixed;
+
+
+    inset: 0;
+
+
+    z-index: -10;
+
+
+
+    background:
+
+
+        radial-gradient(circle at left,
+
+            #081a5b 0%,
+
+            transparent 35%),
+
+
+
+        radial-gradient(circle at right,
+
+            #3a045f 0%,
+
+            transparent 35%),
+
+
+
+        linear-gradient(135deg,
+
+            #020617,
+
+            #05071b,
+
+            #040316);
+
+
+}
+
+
+
+
+
+
+/*========================================
+            INVOICE CONTAINER
+========================================*/
+
+
+.invoice-container {
+
+
+    width: 95%;
+
+
+    max-width: 1500px;
+
+
+    margin: auto;
+
+
+    padding: 40px 20px;
+
+
+}
+
+
+
+
+
+
+
+/*========================================
+                HEADER
+========================================*/
+
+
+.invoice-header {
+
+
+    display: flex;
+
+
+    justify-content: space-between;
+
+
+    align-items: center;
+
+
+    flex-wrap: wrap;
+
+
+    gap: 20px;
+
+
+
+    padding: 30px;
+
+
+
+    border-radius: 35px;
+
+
+
+    background:
+
+        rgba(4, 6, 28, .85);
+
+
+
+    backdrop-filter: blur(25px);
+
+
+
+    border:
+
+        2px solid rgba(255, 255, 255, .08);
+
+
+
+
+    box-shadow:
+
+
+        0 0 25px rgba(0, 191, 255, .25),
+
+
+        0 0 45px rgba(170, 0, 255, .18);
+
+
+
+    margin-bottom: 30px;
+
+
+}
+
+
+
+
+
+/*========================================
+            COMPANY
+========================================*/
+
+
+.company-section {
+
+
+    display: flex;
+
+
+    align-items: center;
+
+
+    gap: 20px;
+
+
+}
+
+
+
+.company-logo {
+
+
+    width: 90px;
+
+
+    height: 90px;
+
+
+    border-radius: 20px;
+
+
+    object-fit: cover;
+
+
+}
+
+
+
+
+
+.company-section h1 {
+
+
+    font-size: 35px;
+
+
+
+    background:
+
+        linear-gradient(90deg,
+
+            #18e7ff,
+
+            #9a6cff,
+
+            #ff4dd9);
+
+
+
+    -webkit-background-clip: text;
+
+
+    -webkit-text-fill-color: transparent;
+
+
+}
+
+
+
+
+
+.company-section p {
+
+
+    color: #c5c8d8;
+
+
+    margin-top: 5px;
+
+
+}
+
+
+
+
+
+/*========================================
+            INVOICE TITLE
+========================================*/
+
+
+.invoice-title {
+
+
+    text-align: right;
+
+
+}
+
+
+
+.invoice-title h2 {
+
+
+    font-size: 35px;
+
+
+
+    background:
+
+        linear-gradient(90deg,
+
+            #ff4dd9,
+
+            #18e7ff);
+
+
+
+    -webkit-background-clip: text;
+
+
+    -webkit-text-fill-color: transparent;
+
+
+}
+
+
+
+
+
+.invoice-title p {
+
+
+    color: #c5c8d8;
+
+
+    margin-top: 8px;
+
+
+}
+
+
+
+
+
+
+
+/*========================================
+            GLASS CARD
+========================================*/
+
+
+.invoice-card {
+
+
+    padding: 30px;
+
+
+
+    border-radius: 30px;
+
+
+
+    background:
+
+        rgba(4, 6, 28, .85);
+
+
+
+    backdrop-filter: blur(25px);
+
+
+
+    border:
+
+        2px solid rgba(255, 255, 255, .08);
+
+
+
+    margin-bottom: 30px;
+
+
+}
+
+
+
+
+
+.invoice-card h3 {
+
+
+    font-size: 25px;
+
+
+    margin-bottom: 25px;
+
+
+
+
+    background:
+
+        linear-gradient(90deg,
+
+            #18e7ff,
+
+            #9a6cff,
+
+            #ff4dd9);
+
+
+
+    -webkit-background-clip: text;
+
+
+    -webkit-text-fill-color: transparent;
+
+
+}
+
+
+
+
+
+
+/*========================================
+            CUSTOMER DETAILS
+========================================*/
+
+
+.customer-details {
+
+
+    display: grid;
+
+
+    grid-template-columns:
+
+        repeat(3, 1fr);
+
+
+
+    gap: 20px;
+
+
+}
+
+
+
+.customer-details div {
+
+
+    padding: 20px;
+
+
+    border-radius: 20px;
+
+
+
+    background:
+
+        rgba(255, 255, 255, .06);
+
+
+}
+
+
+
+
+
+.customer-details label {
+
+
+    color: #c5c8d8;
+
+
+    font-size: 13px;
+
+
+}
+
+
+
+.customer-details p {
+
+
+    margin-top: 8px;
+
+
+    font-size: 15px;
+
+
+}
+
+
+
+
+
+.address {
+
+
+    grid-column: 1/-1;
+
+
+}
+
+
+
+
+
+
+/*========================================
+            TABLE
+========================================*/
+
+
+.table-wrapper {
+
+
+    overflow: auto;
+
+
+    border-radius: 25px;
+
+
+}
+
+
+
+.invoice-table {
+
+
+    width: 100%;
+
+
+    min-width: 1000px;
+
+
+    border-collapse: collapse;
+
+
+}
+
+
+
+.invoice-table thead {
+
+
+    background:
+
+        linear-gradient(90deg,
+
+            #18e7ff,
+
+            #9a6cff);
+
+
+}
+
+
+
+
+.invoice-table th {
+
+
+    padding: 18px;
+
+
+    text-align: left;
+
+
+}
+
+
+
+
+.invoice-table td {
+
+
+    padding: 18px;
+
+
+    border-bottom:
+
+
+        1px solid rgba(255, 255, 255, .08);
+
+
+}
+
+
+
+
+
+.invoice-table tbody tr:hover {
+
+
+    background:
+
+        rgba(255, 255, 255, .05);
+
+
+}
+
+
+
+
+
+
+
+/*========================================
+            SUMMARY
+========================================*/
+
+
+.invoice-summary {
+
+
+    width: 450px;
+
+
+    margin-left: auto;
+
+
+    padding: 25px;
+
+
+
+    border-radius: 30px;
+
+
+
+    background:
+
+        rgba(4, 6, 28, .85);
+
+
+
+    backdrop-filter: blur(25px);
+
+
+
+    border:
+
+        2px solid rgba(255, 255, 255, .08);
+
+
+}
+
+
+
+
+
+.invoice-summary div {
+
+
+    display: flex;
+
+
+    justify-content: space-between;
+
+
+    padding: 15px;
+
+
+    margin-bottom: 10px;
+
+
+    border-radius: 15px;
+
+
+
+    background:
+
+        rgba(255, 255, 255, .05);
+
+
+}
+
+
+
+
+
+.invoice-summary span {
+
+
+    color: #c5c8d8;
+
+
+}
+
+
+
+.invoice-summary strong {
+
+
+    color: #18e7ff;
+
+
+}
+
+
+
+
+
+.final-total {
+
+
+    background:
+
+
+        linear-gradient(90deg,
+
+            rgba(24, 231, 255, .15),
+
+            rgba(255, 77, 217, .15)) !important;
+
+
+}
+
+
+
+
+
+.final-total strong {
+
+
+    font-size: 25px;
+
+
+}
+
+
+
+
+
+
+
+
+/*========================================
+            FOOTER
+========================================*/
+
+
+.invoice-footer {
+
+
+    margin-top: 35px;
+
+
+    display: flex;
+
+
+    justify-content: space-between;
+
+
+    align-items: center;
+
+
+    flex-wrap: wrap;
+
+
+    gap: 20px;
+
+
+    padding: 30px;
+
+
+    border-radius: 30px;
+
+
+
+    background:
+
+        rgba(4, 6, 28, .85);
+
+
+
+    backdrop-filter: blur(25px);
+
+
+
+    border:
+
+        2px solid rgba(255, 255, 255, .08);
+
+
+}
+
+
+
+
+
+.signature {
+
+
+    color: #c5c8d8;
+
+
+}
+
+
+
+
+
+
+
+/*========================================
+            ACTION BUTTONS
+========================================*/
+
+
+.invoice-actions {
+
+
+    display: flex;
+
+
+    gap: 15px;
+
+
+}
+
+
+
+
+.invoice-actions button {
+
+
+    padding: 15px 30px;
+
+
+    border-radius: 15px;
+
+
+    color: white;
+
+
+    font-weight: 600;
+
+
+    cursor: pointer;
+
+
+    border: none;
+
+
+}
+
+
+
+.print-btn {
+
+
+    background:
+
+        linear-gradient(90deg,
+
+            #18e7ff,
+
+            #9a6cff);
+
+
+}
+
+
+
+.pdf-btn {
+
+
+    background:
+
+        linear-gradient(90deg,
+
+            #9a6cff,
+
+            #ff4dd9);
+
+
+}
+
+
+
+
+.invoice-actions button:hover {
+
+
+    transform: translateY(-4px);
+
+
+    box-shadow:
+
+        0 0 20px rgba(0, 191, 255, .40);
+
+
+}
+
+
+
+
+
+@media print {
+
+    /* Keep invoice colors and backgrounds */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    html,
+    body {
+        background: #05071b !important;
+        color: white !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    body::before {
+        display: block !important;
+        position: fixed !important;
+        inset: 0 !important;
+        background:
+            radial-gradient(circle at left,
+                #081a5b 0%,
+                transparent 35%),
+            radial-gradient(circle at right,
+                #3a045f 0%,
+                transparent 35%),
+            linear-gradient(135deg,
+                #020617,
+                #05071b,
+                #040316) !important;
+        z-index: -10 !important;
+    }
+
+    .invoice-container {
+        width: 95% !important;
+        max-width: 1500px !important;
+        margin: auto !important;
+        padding: 20px !important;
+    }
+
+    .invoice-header,
+    .invoice-card,
+    .invoice-summary,
+    .invoice-footer {
+        background: rgba(4, 6, 28, 0.85) !important;
+        color: white !important;
+
+        border: 2px solid rgba(255, 255, 255, 0.08) !important;
+
+        box-shadow:
+            0 0 25px rgba(0, 191, 255, 0.25),
+            0 0 45px rgba(170, 0, 255, 0.18) !important;
+
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .invoice-title h2,
+    .company-section h1,
+    .invoice-card h3 {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .invoice-actions {
+        display: none !important;
+    }
+
+    .invoice-table thead {
+        background:
+            linear-gradient(90deg,
+                #18e7ff,
+                #9a6cff) !important;
+
+        color: white !important;
+    }
+
+    .invoice-table th,
+    .invoice-table td {
+        color: white !important;
+    }
+
+    .invoice-summary strong {
+        color: #18e7ff !important;
+    }
+
+    .final-total {
+        background:
+            linear-gradient(90deg,
+                rgba(24, 231, 255, 0.15),
+                rgba(255, 77, 217, 0.15)) !important;
+    }
+
+    .final-total strong {
+        color: #18e7ff !important;
+    }
+
+    /* Prevent sections from splitting unnecessarily */
+    .invoice-header,
+    .invoice-card,
+    .invoice-summary,
+    .invoice-footer {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+/*========================================
+            RESPONSIVE
+========================================*/
+
+
+@media(max-width:992px) {
+
+
+    .invoice-header {
+
+
+        flex-direction: column;
+
+
+        align-items: flex-start;
+
+
+    }
+
+
+
+    .invoice-title {
+
+
+        text-align: left;
+
+
+    }
+
+
+
+    .customer-details {
+
+
+        grid-template-columns: 1fr;
+
+
+    }
+
+
+
+    .invoice-summary {
+
+
+        width: 100%;
+
+
+    }
+
+
+
+}
+
+
+
+@media(max-width:600px) {
+
+
+
+    .invoice-container {
+
+
+        width: 98%;
+
+
+    }
+
+
+
+    .invoice-header,
+    .invoice-card,
+    .invoice-footer {
+
+
+        padding: 20px;
+
+
+    }
+
+
+
+    .company-section h1 {
+
+
+        font-size: 28px;
+
+
+    }
+
+
+
+    .invoice-actions {
+
+
+        flex-direction: column;
+
+
+        width: 100%;
+
+
+    }
+
+
+
+    .invoice-actions button {
+
+
+        width: 100%;
+
+
+    }
+
+
+}

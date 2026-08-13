@@ -1,0 +1,732 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+
+/*=========================================
+              RESET
+=========================================*/
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+body {
+
+
+    min-height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+
+    background: #05071b;
+
+    color: white;
+
+    overflow: hidden;
+
+
+}
+
+
+
+
+
+
+/*=========================================
+              BACKGROUND
+=========================================*/
+
+
+.background {
+
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+
+
+    background:
+
+        radial-gradient(circle at left,
+            #081a5b,
+            transparent 35%),
+
+
+        radial-gradient(circle at right,
+            #3a045f,
+            transparent 35%),
+
+
+        linear-gradient(135deg,
+            #020617,
+            #05071b,
+            #040316);
+
+
+}
+
+
+
+
+.circle {
+
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(8px);
+
+    opacity: .35;
+
+
+}
+
+
+
+
+.circle1 {
+
+
+    width: 180px;
+
+    height: 180px;
+
+    background: #13d9ff;
+
+    left: -50px;
+
+    top: 80px;
+
+
+}
+
+
+
+.circle2 {
+
+
+    width: 250px;
+
+    height: 250px;
+
+    background: #9400ff;
+
+    right: -100px;
+
+    top: 200px;
+
+
+}
+
+
+
+.circle3 {
+
+
+    width: 120px;
+
+    height: 120px;
+
+    background: #13d9ff;
+
+    bottom: 50px;
+
+    left: 100px;
+
+
+}
+
+
+
+
+.circle4 {
+
+
+    width: 180px;
+
+    height: 180px;
+
+    background: #ff23c6;
+
+    right: 100px;
+
+    bottom: -50px;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================
+             MAIN PAGE
+=========================================*/
+
+
+.add-product-page {
+
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding-top: 25px;
+
+
+}
+
+
+
+
+
+
+/*=========================================
+              TOP HEADER
+=========================================*/
+
+
+.top-card {
+
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+
+    padding: 20px 30px;
+
+
+    border-radius: 25px;
+
+
+    background:
+        rgba(4, 6, 28, .85);
+
+
+    backdrop-filter: blur(25px);
+
+
+    border:
+        1px solid rgba(255, 255, 255, .12);
+
+
+
+    box-shadow:
+
+        0 0 25px rgba(0, 191, 255, .25);
+
+
+
+}
+
+
+
+
+
+.top-card h1 {
+
+
+    font-size: 32px;
+
+
+    background:
+
+        linear-gradient(90deg,
+            #18e7ff,
+            #9a6cff,
+            #ff4dd9);
+
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+
+}
+
+
+
+
+
+.top-card p {
+
+
+    color: #c5c8d8;
+
+    font-size: 14px;
+
+    margin-top: 5px;
+
+
+}
+
+
+
+
+
+.back-btn {
+
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 15px;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+
+    background:
+
+        linear-gradient(90deg,
+            #ff4dd9,
+            #9a6cff);
+
+
+}
+
+
+
+
+
+
+/*=========================================
+              FORM CARD
+=========================================*/
+
+
+.form-card {
+
+
+    margin-top: 25px;
+
+
+    padding: 30px;
+
+
+    border-radius: 30px;
+
+
+    background:
+
+        rgba(4, 6, 28, .85);
+
+
+    backdrop-filter: blur(25px);
+
+
+
+    border:
+
+        1px solid rgba(255, 255, 255, .12);
+
+
+
+    box-shadow:
+
+        0 0 30px rgba(154, 108, 255, .25);
+
+
+}
+
+
+
+
+
+
+
+/*=========================================
+              FORM GRID
+=========================================*/
+
+
+.form-grid {
+
+
+    display: grid;
+
+
+    grid-template-columns:
+
+        repeat(2, 1fr);
+
+
+    gap: 20px;
+
+
+}
+
+
+
+
+
+.input-box {
+
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+
+}
+
+
+
+
+.input-box.full {
+
+
+    grid-column:
+
+        span 2;
+
+
+}
+
+
+
+
+.input-box label {
+
+
+    font-size: 13px;
+
+    color: #c5c8d8;
+
+    font-weight: 500;
+
+
+}
+
+
+
+
+
+
+
+.input-box input,
+.input-box select {
+
+
+    height: 48px;
+
+
+    border: none;
+
+
+    outline: none;
+
+
+    border-radius: 14px;
+
+
+    padding: 0 18px;
+
+
+    color: white;
+
+
+    font-size: 15px;
+
+
+
+    background:
+
+        rgba(255, 255, 255, .08);
+
+
+}
+
+
+
+
+
+.input-box input::placeholder {
+
+
+    color: #9ca3af;
+
+
+}
+
+
+
+
+.input-box select option {
+
+
+    color: black;
+
+
+}
+
+
+
+
+
+
+
+.input-box input:focus,
+.input-box select:focus {
+
+
+    border:
+
+        1px solid #18e7ff;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================
+              BUTTONS
+=========================================*/
+
+
+.form-buttons {
+
+
+    margin-top: 30px;
+
+
+    display: flex;
+
+
+    justify-content: center;
+
+
+    gap: 20px;
+
+
+}
+
+
+
+
+.form-buttons button {
+
+
+    border: none;
+
+
+    padding: 14px 35px;
+
+
+    border-radius: 15px;
+
+
+    color: white;
+
+
+    cursor: pointer;
+
+
+    font-weight: 600;
+
+
+    font-size: 15px;
+
+
+}
+
+
+
+
+.save-btn {
+
+
+    background:
+
+        linear-gradient(90deg,
+            #18e7ff,
+            #9a6cff);
+
+
+}
+
+
+
+
+.cancel-btn {
+
+
+    background:
+
+        linear-gradient(90deg,
+            #ff4d4d,
+            #ff23c6);
+
+
+}
+
+
+
+
+button:hover {
+
+
+    transform: translateY(-3px);
+
+
+    box-shadow:
+
+        0 0 20px rgba(0, 191, 255, .4);
+
+
+}
+
+
+
+
+
+
+
+/*=========================================
+              FOOTER
+=========================================*/
+
+
+.footer {
+
+
+    text-align: center;
+
+
+    margin-top: 20px;
+
+
+    color: #8f94a8;
+
+
+    font-size: 13px;
+
+
+}
+
+
+
+
+
+
+
+/*=========================================
+              RESPONSIVE
+=========================================*/
+
+
+@media(max-width:768px) {
+
+
+    body {
+
+        overflow: auto;
+
+    }
+
+
+    .form-grid {
+
+
+        grid-template-columns: 1fr;
+
+
+    }
+
+
+
+    .input-box.full {
+
+
+        grid-column: auto;
+
+
+    }
+
+
+
+    .top-card {
+
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        align-items: flex-start;
+
+
+    }
+
+
+
+}
+
+/*=========================================
+        SUCCESS NOTIFICATION
+=========================================*/
+.success-message {
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(0);
+
+    padding: 20px 40px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(90deg,
+            #18e7ff,
+            #9a6cff);
+
+    color: white;
+
+    font-weight: 600;
+
+    font-size: 18px;
+
+    box-shadow:
+        0 0 30px rgba(24, 231, 255, .5);
+
+    transition: .4s;
+
+    z-index: 999;
+
+}
+
+
+.success-message.show {
+
+    transform:
+        translate(-50%, -50%) scale(1);
+
+}

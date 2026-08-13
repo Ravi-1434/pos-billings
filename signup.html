@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Stackly - Sign Up</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="sign.css">
+    <script src="sign.js" defer></script>
+
+</head>
+
+<body>
+
+    <div class="background-circle one"></div>
+    <div class="background-circle two"></div>
+    <div class="background-circle three"></div>
+
+    <div class="signup-wrapper">
+
+        <div class="signup-box">
+
+            <div class="logo-section">
+
+
+                <h1>Create an Account</h1>
+
+                <p>
+                    Turn ideas into action - stay organized,
+                    stay ahead.
+                </p>
+
+            </div>
+
+
+
+
+
+            <!-- Custom Popup -->
+            <div id="popupMessage" class="popup-message">
+                <span id="popupText"></span>
+            </div>
+
+
+
+            <form id="signupForm" novalidate>
+
+
+                <div class="input-group">
+                    <label>First Name</label>
+                    <input type="text" name="firstName" maxlength="20" placeholder="Enter your first name" required>
+                </div>
+
+
+                <div class="input-group">
+                    <label>Last Name</label>
+                    <input type="text" name="lastName" maxlength="30" placeholder="Enter your last name" required>
+                </div>
+
+
+                <div class="input-group">
+                    <label>Company Name</label>
+                    <input type="text" name="companyName" maxlength="50" placeholder="Enter company name" required>
+                </div>
+
+
+
+                <div class="input-group">
+                    <label>Company Code</label>
+
+                    <input type="text" name="companyCode" maxlength="20" placeholder="PENDING / Existing Company Code"
+                        required>
+
+                    <small>
+                        New Company → PENDING &nbsp;&nbsp; Existing → Company Code
+                    </small>
+
+                </div>
+
+
+
+                <div class="input-group">
+
+                    <label>Phone Number</label>
+
+                    <div class="phone-box">
+
+                        <select id="countryCode">
+
+                            <option value="+91">IN +91</option>
+                            <option value="+971">AE +971</option>
+                            <option value="+974">QA +974</option>
+                            <option value="+966">SA +966</option>
+                            <option value="+94">LK +94</option>
+                            <option value="+880">BD +880</option>
+                            <option value="+977">NP +977</option>
+                            <option value="+1">US +1</option>
+                            <option value="+44">GB +44</option>
+
+                        </select>
+
+
+                        <input type="tel" id="phone" name="phone" maxlength="10" placeholder="Phone Number" required>
+                    </div>
+
+                </div>
+
+
+
+                <div class="input-group">
+
+                    <label>Email Address</label>
+
+                    <div class="otp-box">
+
+                        <input type="email" id="email" placeholder="Enter email address" maxlength="50" required>
+
+
+                        <button type="button" id="sendOtpBtn">
+
+                            Send OTP
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="input-group">
+
+                    <label>Enter OTP</label>
+
+                    <div class="otp-box">
+
+                        <input type="text" id="otp" maxlength="6" placeholder="Enter OTP" disabled>
+
+
+                        <button type="button" id="verifyOtpBtn" disabled>
+
+                            Verify
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="input-group">
+
+                    <label>Password</label>
+
+                    <div class="password-box">
+
+                        <input type="password" id="password" maxlength="16" placeholder="Create Password" disabled>
+
+                        <button type="button" class="eye-btn" id="togglePassword">
+
+                            👁
+
+                        </button>
+
+                    </div>
+
+                    <small id="capsWarningSignup" class="caps-warning">
+
+                        Caps Lock is ON
+
+                    </small>
+
+                </div>
+
+
+
+
+                <div class="input-group">
+
+                    <label>Confirm Password</label>
+
+                    <div class="password-box">
+
+                        <input type="password" id="confirmPassword" maxlength="16" placeholder="Confirm Password"
+                            disabled>
+
+                        <button type="button" class="eye-btn" id="toggleConfirmPassword">
+
+                            👁
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="footer-text">
+
+                    Already have an account?
+
+
+                    <a href="login.html">Log In</a>
+
+                </div>
+
+
+
+                <button type="submit" id="signupBtn" class="signup-btn">
+
+                    Sign Up
+
+                </button>
+
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

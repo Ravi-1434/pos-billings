@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Forgot Password - Stackly</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="forgot.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body class="forgot-page">
+
+    <div class="background-glow">
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+        <div class="circle three"></div>
+        <div class="circle four"></div>
+    </div>
+
+
+    <div class="forgot-container">
+
+        <div class="forgot-box">
+
+            <!-- LOGO -->
+
+            <div class="logo-section">
+
+
+            </div>
+
+
+            <h2 class="forgot-title">
+                Forgot Your Password?
+            </h2>
+
+
+            <p class="forgot-subtext">
+
+                No worries! Enter your email and we’ll send a reset link to your inbox.
+
+            </p>
+
+
+            <form id="forgotForm">
+
+                <div class="input-group">
+
+                    <label>Email Address</label>
+
+                    <div class="input-box">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input type="email" id="fpEmail" placeholder="Enter your email address" required>
+
+                    </div>
+
+                    <small id="fpEmailError"></small>
+
+                </div>
+
+
+
+                <button type="button" id="fpSendBtn" class="send-btn">
+                    Send Reset Link
+                </button>
+
+
+                <p id="fpStatus" class="status-msg"></p>
+
+
+
+                <div class="footer-text">
+
+                    <a href="login.html">
+                        Back to Log In
+                    </a>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="forgot.js"></script>
+
+</body>
+
+</html>

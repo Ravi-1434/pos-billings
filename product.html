@@ -1,0 +1,464 @@
+<!-- templates/products.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neo Galaxy ERP | Product Master</title>
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?
+family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="product.css">
+
+</head>
+
+
+<body>
+
+
+    <!--=================================
+            BACKGROUND EFFECTS
+    ===================================-->
+
+    <div class="background">
+
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+        <div class="circle circle5"></div>
+        <div class="circle circle6"></div>
+
+    </div>
+
+
+
+    <!--=================================
+             PRODUCT MASTER
+    ===================================-->
+
+    <section class="product-master">
+
+
+        <!--=================================
+                 HEADER
+        ===================================-->
+
+        <div class="header-card">
+
+            <div class="left-content">
+
+                <h1>
+                    Product
+                </h1>
+
+                <p>
+                    Manage all your products,
+                    stock levels and pricing.
+                </p>
+
+            </div>
+
+
+            <div class="right-content">
+
+                <button class="add-btn">
+
+
+                    add product
+                </button>
+
+
+
+                <button class="export-btn" id="exitBtn">
+
+                    <i class="fa-solid fa-file-export"></i>
+
+                    Exit
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <!--=================================
+                DASHBOARD CARDS
+        ===================================-->
+
+        <div class="dashboard-cards">
+
+
+            <div class="card">
+
+                <i class="fa-solid fa-box"></i>
+
+                <h2>1250</h2>
+
+                <p>Total Products</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h2>980</h2>
+
+                <p>Active Products</p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+                <h2>35</h2>
+
+                <p>Low Stock</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <i class="fa-solid fa-building"></i>
+
+                <h2>54</h2>
+
+                <p>Companies</p>
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <!--=================================
+                 SEARCH BAR
+        ===================================-->
+
+        <div class="search-section">
+
+
+            <input type="text" placeholder="Search Product ID">
+
+
+            <input type="text" placeholder="Search Product Name">
+
+
+            <button>
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+
+            </button>
+
+
+        </div>
+
+
+
+
+        <!--=================================
+                    FILTERS
+        ===================================-->
+
+        <div class="filters">
+
+
+            <select>
+
+                <option>
+                    Category
+                </option>
+
+                <option>
+                    Electronics
+                </option>
+
+                <option>
+                    Accessories
+                </option>
+
+                <option>
+                    Software
+                </option>
+
+            </select>
+
+
+
+            <select>
+
+                <option>
+                    Product Type
+                </option>
+
+                <option>
+                    Laptop
+                </option>
+
+                <option>
+                    Printer
+                </option>
+
+                <option>
+                    Monitor
+                </option>
+
+            </select>
+
+
+
+            <select>
+
+                <option>
+                    Status
+                </option>
+
+                <option>
+                    Active
+                </option>
+
+                <option>
+                    Inactive
+                </option>
+
+            </select>
+
+
+
+            <button>
+
+                Clear Filter
+
+            </button>
+
+
+        </div>
+
+
+
+
+        <!--=================================
+                 PRODUCT TABLE
+        ===================================-->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Company</th>
+                        <th>Type</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Status</th>
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td>PR001</td>
+
+                        <td>
+
+                            <img src="https://placehold.co/60x60" alt="product">
+
+                        </td>
+
+                        <td>
+                            Neo Gaming Laptop
+                        </td>
+
+                        <td>
+                            Galaxy Technologies
+                        </td>
+
+                        <td>
+                            Laptop
+                        </td>
+
+                        <td>
+                            £1,249
+                        </td>
+
+                        <td>
+                            150
+                        </td>
+
+                        <td>
+
+                            <span class="active">
+
+                                Active
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button>
+                                Edit
+                            </button>
+
+
+                            <button>
+                                Delete
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+
+
+                    <tr>
+
+                        <td>PR002</td>
+
+                        <td>
+
+                            <img src="https://placehold.co/60x60" alt="product">
+
+                        </td>
+
+                        <td>
+                            RGB Keyboard
+                        </td>
+
+                        <td>
+                            NeoX Pvt Ltd
+                        </td>
+
+                        <td>
+                            Accessories
+                        </td>
+
+                        <td>
+                            £129
+                        </td>
+
+                        <td>
+                            350
+                        </td>
+
+                        <td>
+
+                            <span class="active">
+
+                                Active
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button>
+                                Edit
+                            </button>
+
+
+                            <button>
+                                Delete
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+
+            </table>
+
+        </div>
+
+
+
+
+        <!--=================================
+                   PAGINATION
+        ===================================-->
+
+        <div class="pagination">
+
+            <span>
+                Page 1 of 10
+            </span>
+
+
+            <div class="page-buttons">
+
+                <button>
+                    Previous
+                </button>
+
+
+                <button>
+                    Next
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="product.js"></script>
+
+
+</body>
+
+</html>

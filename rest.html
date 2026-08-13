@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Reset Password</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="reset.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="bg-circle circle1"></div>
+    <div class="bg-circle circle2"></div>
+    <div class="bg-circle circle3"></div>
+    <div class="bg-circle circle4"></div>
+
+    <!-- Reset Password Card -->
+
+    <div class="container">
+
+        <div class="glass-card">
+
+            <!-- Glow Border -->
+            <div class="border-glow"></div>
+
+            <!-- Heading -->
+
+            <h1 class="title">
+                Reset Password
+            </h1>
+
+            <p class="subtitle">
+                Create a new secure password for your account.
+            </p>
+
+            <!-- Success Message -->
+
+            <div id="successMessage" class="message success">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Password updated successfully.
+
+            </div>
+
+            <!-- Error Message -->
+
+            <div id="errorMessage" class="message error">
+
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+                Please fill all required fields.
+
+            </div>
+
+            <!-- FORM -->
+
+            <form id="resetForm">
+
+                <!-- Verification Code -->
+
+                <div class="input-group">
+
+                    <label>
+                        Verification Code
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <input type="text" id="otp" maxlength="6" placeholder="Enter verification code"
+                            autocomplete="off">
+
+                    </div>
+
+                </div>
+
+                <!-- New Password -->
+
+                <div class="input-group">
+
+                    <label>
+                        New Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input type="password" id="password" placeholder="Create new password">
+
+                        <span class="togglePassword" data-target="password">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </span>
+
+                    </div>
+
+                    <div id="strengthBar">
+
+                        <span></span>
+
+                    </div>
+
+                    <small id="strengthText">
+                        Password Strength
+                    </small>
+
+                </div>
+
+                <!-- Confirm Password -->
+
+                <div class="input-group">
+
+                    <label>
+                        Confirm Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input type="password" id="confirmPassword" placeholder="Confirm new password">
+
+                        <span class="togglePassword" data-target="confirmPassword">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </span>
+
+                    </div>
+
+                    <small id="matchMessage"></small>
+
+                </div>
+
+                <!-- Password Rules -->
+
+                <div class="password-rules">
+
+                    <p>Password must contain:</p>
+
+                    <ul>
+
+                        <li id="rule1">
+                            8+ Characters
+                        </li>
+
+                        <li id="rule2">
+                            One Uppercase Letter
+                        </li>
+
+                        <li id="rule3">
+                            One Number
+                        </li>
+
+                        <li id="rule4">
+                            One Special Character
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Button -->
+
+                <button id="resetBtn" type="submit">
+
+                    <span class="btn-text">
+
+                        Reset Password
+
+                    </span>
+
+                    <span class="loader"></span>
+
+                </button>
+
+            </form>
+
+            <!-- Back -->
+
+            <div class="back-link">
+
+                <a href="login.html">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Return to login
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Toast -->
+
+    <div id="toast" class="toast">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+
+
+    </div>
+
+    <!-- JavaScript -->
+
+    <script src="reset.js"></script>
+
+</body>
+
+</html>

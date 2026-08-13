@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sales Order | ERP</title>
+
+    <link rel="stylesheet" href="sales.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="sales-container">
+
+        <!-- ================= HEADER ================= -->
+
+        <div class="sales-header">
+
+            <div class="header-left">
+                <h1>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Sales Order
+                </h1>
+                <p>Create New Sales Order</p>
+            </div>
+
+
+            <div class="header-actions">
+
+                <button class="btn-back" onclick="goDashboard()">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= ORDER INFORMATION ================= -->
+
+
+        <section class="card">
+
+            <h2 class="section-title">
+                <i class="fa-solid fa-file-invoice"></i>
+                Order Information
+            </h2>
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Sales Order No
+                    </label>
+
+                    <input type="text" id="salesOrderNo" readonly>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Order Date
+                    </label>
+
+                    <input type="date" id="orderDate">
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Delivery Date
+                    </label>
+
+                    <input type="date" id="deliveryDate">
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Sales Person
+                    </label>
+
+                    <input type="text" id="salesPerson" placeholder="Enter sales person">
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Payment Mode
+                    </label>
+
+
+                    <select id="paymentMode">
+
+                        <option value="">
+                            Select Payment
+                        </option>
+
+                        <option value="Cash">
+                            Cash
+                        </option>
+
+                        <option value="Card">
+                            Card
+                        </option>
+
+                        <option value="UPI">
+                            UPI
+                        </option>
+
+                        <option value="Credit">
+                            Credit
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Order Status
+                    </label>
+
+
+                    <select id="orderStatus">
+
+                        <option value="Draft">
+                            Draft
+                        </option>
+
+                        <option value="Confirmed">
+                            Confirmed
+                        </option>
+
+                        <option value="Completed">
+                            Completed
+                        </option>
+
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+        <!-- ================= CUSTOMER SECTION ================= -->
+
+
+        <section class="card">
+
+
+            <h2 class="section-title">
+
+                <i class="fa-solid fa-user"></i>
+
+                Customer Details
+
+            </h2>
+
+
+
+            <div class="customer-search">
+
+
+                <label>
+                    Select Customer
+                </label>
+
+
+                <select id="customerSelect" onchange="loadCustomerDetails()">
+
+                    <option value="">
+                        Search Customer
+                    </option>
+
+                </select>
+
+
+            </div>
+
+
+
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Customer ID
+                    </label>
+
+                    <input type="text" id="customerId" readonly>
+
+                </div>
+
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Customer Name
+                    </label>
+
+                    <input type="text" id="customerName" readonly>
+
+                </div>
+
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Mobile
+                    </label>
+
+                    <input type="text" id="customerMobile" readonly>
+
+                </div>
+
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        GST Number
+                    </label>
+
+                    <input type="text" id="customerGST" readonly>
+
+                </div>
+
+
+
+                <div class="form-group full-width">
+
+                    <label>
+                        Address
+                    </label>
+
+
+                    <textarea id="customerAddress" readonly></textarea>
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+
+
+        <!-- ================= PRODUCT SECTION ================= -->
+
+
+        <section class="card">
+
+
+            <div class="table-header">
+
+
+                <h2 class="section-title">
+
+                    <i class="fa-solid fa-box"></i>
+
+                    Product Details
+
+                </h2>
+
+
+
+                <button class="btn-add" onclick="addProductRow()">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Product
+
+                </button>
+
+
+            </div>
+
+
+
+
+
+            <div class="table-wrapper">
+
+
+                <table class="product-table">
+
+
+                    <thead>
+
+
+                        <tr>
+
+                            <th>
+                                Product
+                            </th>
+
+
+                            <th>
+                                Price
+                            </th>
+
+
+                            <th>
+                                Stock
+                            </th>
+
+
+                            <th>
+                                Qty
+                            </th>
+
+
+                            <th>
+                                GST %
+                            </th>
+
+
+                            <th>
+                                Discount
+                            </th>
+
+
+                            <th>
+                                Total
+                            </th>
+
+
+                            <th>
+                                Action
+                            </th>
+
+
+                        </tr>
+
+
+                    </thead>
+
+
+
+
+                    <tbody id="productTableBody">
+
+
+                    </tbody>
+
+
+
+                </table>
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+
+
+        <!-- ================= SUMMARY ================= -->
+
+
+        <section class="card summary-card">
+
+
+            <h2 class="section-title">
+
+                <i class="fa-solid fa-calculator"></i>
+
+                Order Summary
+
+            </h2>
+
+
+
+            <div class="summary-box">
+
+
+                <div>
+                    <span>
+                        Sub Total
+                    </span>
+
+                    <strong id="subTotal">
+                        ₹0.00
+                    </strong>
+
+                </div>
+
+
+
+
+                <div>
+
+                    <span>
+                        Discount
+                    </span>
+
+
+                    <strong id="totalDiscount">
+                        ₹0.00
+                    </strong>
+
+
+                </div>
+
+
+
+
+                <div>
+
+                    <span>
+                        GST
+                    </span>
+
+
+                    <strong id="totalGST">
+                        ₹0.00
+                    </strong>
+
+
+                </div>
+
+
+
+
+                <div class="grand-total">
+
+                    <span>
+                        Grand Total
+                    </span>
+
+
+                    <strong id="grandTotal">
+                        ₹0.00
+                    </strong>
+
+
+                </div>
+
+
+
+
+                <div>
+
+                    <span>
+                        Paid Amount
+                    </span>
+
+
+                    <input type="number" id="paidAmount" value="0" oninput="calculateBalance()">
+
+
+                </div>
+
+
+
+
+                <div>
+
+                    <span>
+                        Balance Amount
+                    </span>
+
+
+                    <strong id="balanceAmount">
+                        ₹0.00
+                    </strong>
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+        <!-- ================= ACTION BUTTONS ================= -->
+
+
+        <div class="sales-footer">
+
+
+            <button class="btn-clear" onclick="clearSale()">
+
+                <i class="fa-solid fa-trash"></i>
+
+                Clear
+
+            </button>
+
+
+
+
+            <button class="btn-draft" onclick="saveDraft()">
+
+                <i class="fa-solid fa-file"></i>
+
+                Save Draft
+
+            </button>
+
+
+
+
+
+            <button class="btn-save" onclick="saveOrder()">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Save Order
+
+            </button>
+
+
+
+
+
+            <button class="btn-invoice" onclick="generateInvoice()">
+
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                Generate Invoice
+
+            </button>
+
+
+
+
+            <button class="btn-print" onclick="printInvoice()">
+
+                <i class="fa-solid fa-print"></i>
+
+                Print
+
+            </button>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+    <!-- ================= CUSTOM POPUP ================= -->
+
+    <div id="popupOverlay" class="popup-overlay">
+
+        <div class="popup-box">
+
+            <h3 id="popupTitle">
+                Confirm
+            </h3>
+
+            <p id="popupMessage">
+                Are you sure?
+            </p>
+
+
+            <div class="popup-buttons">
+
+                <button id="popupCancel" class="btn-clear">
+                    Cancel
+                </button>
+
+
+                <button id="popupOk" class="btn-save">
+                    OK
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="sales.js"></script>
+
+
+</body>
+
+</html>

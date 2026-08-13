@@ -1,0 +1,575 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Customer</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cyan: #18e7ff;
+            --blue: #4b8dff;
+            --purple: #9b4dff;
+            --pink: #ff2ecb;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            background:
+                radial-gradient(circle at left, #081a5b 0%, transparent 35%),
+                radial-gradient(circle at right, #3a045f 0%, transparent 35%),
+                linear-gradient(135deg, #020617, #05071b, #040316);
+            overflow-x: hidden;
+        }
+
+        .card {
+
+            width: 100%;
+            max-width: 700px;
+
+            padding: 35px;
+
+            border-radius: 25px;
+
+            background: rgba(8, 12, 35, .88);
+
+            backdrop-filter: blur(20px);
+
+            border: 2px solid rgba(75, 120, 255, .2);
+
+            box-shadow:
+                0 0 25px rgba(0, 170, 255, .15),
+                0 0 45px rgba(183, 0, 255, .12);
+
+        }
+
+        .title {
+
+            text-align: center;
+            margin-bottom: 30px;
+
+        }
+
+        .title h1 {
+
+            font-size: 38px;
+
+            background: linear-gradient(90deg,
+                    var(--cyan),
+                    var(--blue),
+                    var(--purple),
+                    var(--pink));
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+
+        .title p {
+
+            color: #c8cede;
+            margin-top: 8px;
+
+        }
+
+        .form-grid {
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+
+        }
+
+        .form-group {
+
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .form-group label {
+
+            color: white;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 600;
+
+        }
+
+        .form-group input,
+        .form-group select {
+
+            height: 55px;
+            border: none;
+            outline: none;
+            padding: 0 18px;
+            border-radius: 14px;
+
+            background: #101633;
+            color: white;
+
+            border: 1px solid rgba(255, 255, 255, .08);
+
+            font-size: 15px;
+
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+
+            border-color: var(--cyan);
+
+            box-shadow:
+                0 0 15px rgba(24, 231, 255, .35);
+
+        }
+
+        .full {
+            grid-column: 1/3;
+        }
+
+        .buttons {
+
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+
+        }
+
+        button {
+
+            border: none;
+            padding: 15px 28px;
+            border-radius: 14px;
+
+            cursor: pointer;
+            color: white;
+
+            font-size: 16px;
+            font-weight: 600;
+
+            transition: .3s;
+
+        }
+
+        .save-btn {
+
+            background: linear-gradient(90deg,
+                    var(--cyan),
+                    var(--blue),
+                    var(--purple),
+                    var(--pink));
+
+        }
+
+        .cancel-btn {
+
+            background: linear-gradient(90deg,
+                    #ff4f7b,
+                    #ff0055);
+
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+        }
+
+        #notification {
+
+            position: fixed;
+
+            top: 50%;
+            left: 50%;
+
+            transform:
+                translate(-50%, -50%) scale(.8);
+
+            padding: 18px 30px;
+
+            border-radius: 15px;
+
+            color: white;
+            font-weight: 600;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: .4s;
+
+            z-index: 9999;
+
+        }
+
+        #notification.show {
+
+            opacity: 1;
+            visibility: visible;
+
+            transform:
+                translate(-50%, -50%) scale(1);
+
+        }
+
+        @media(max-width:768px) {
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full {
+                grid-column: auto;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+
+            .title h1 {
+                font-size: 30px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="title">
+
+            <h1>Add Customer</h1>
+
+            <p>Enter customer details below</p>
+
+        </div>
+
+        <form id="customerForm">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Customer Name</label>
+                    <input type="text" id="name" placeholder="Enter Customer Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="text" id="phone" maxlength="10" placeholder="Enter 10 digit number" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email" placeholder="Enter Email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" id="city" placeholder="Enter City" required>
+                </div>
+
+                <div class="form-group full">
+                    <label>Status</label>
+
+                    <select id="status">
+
+                        <option value="Active">
+                            Active
+                        </option>
+
+                        <option value="Inactive">
+                            Inactive
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="buttons">
+
+                <button type="submit" class="save-btn">
+
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    Save Customer
+
+                </button>
+
+                <button type="button" id="cancelBtn" class="cancel-btn">
+
+                    <i class="fa-solid fa-xmark"></i>
+                    Cancel
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <div id="notification"></div>
+
+    <script>
+
+        const form =
+            document.getElementById("customerForm");
+
+        const phone =
+            document.getElementById("phone");
+
+        const cancelBtn =
+            document.getElementById("cancelBtn");
+
+
+        // PHONE NUMBER
+
+        phone.addEventListener("input", function () {
+
+            this.value = this.value
+                .replace(/\D/g, "")
+                .slice(0, 10);
+
+        });
+
+
+        // NOTIFICATION
+
+        function showNotification(
+            message,
+            type = "success"
+        ) {
+
+            const box =
+                document.getElementById(
+                    "notification"
+                );
+
+            box.innerHTML = message;
+
+
+            if (type === "error") {
+
+                box.style.background =
+                    "linear-gradient(135deg,#ff3f7f,#ff0055)";
+
+            } else {
+
+                box.style.background =
+                    "linear-gradient(135deg,#18e7ff,#4b8dff,#9b4dff)";
+
+            }
+
+
+            box.classList.add("show");
+
+
+            setTimeout(() => {
+
+                box.classList.remove("show");
+
+            }, 2000);
+
+        }
+
+
+        // SAVE DATA
+
+        form.addEventListener(
+            "submit",
+
+            function (e) {
+
+                e.preventDefault();
+
+
+                const name =
+                    document.getElementById("name")
+                        .value.trim();
+
+                const phoneNumber =
+                    phone.value.trim();
+
+                const email =
+                    document.getElementById("email")
+                        .value.trim();
+
+                const city =
+                    document.getElementById("city")
+                        .value.trim();
+
+                const status =
+                    document.getElementById("status")
+                        .value;
+
+
+                // VALIDATIONS
+
+                if (!/^[A-Za-z ]{3,30}$/
+                    .test(name)) {
+
+                    showNotification(
+                        "Enter valid customer name.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+                if (!/^[0-9]{10}$/
+                    .test(phoneNumber)) {
+
+                    showNotification(
+                        "Phone number must contain 10 digits.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+                if (
+                    !/^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|outlook\.com|hotmail\.com|thestackly\.com|stackly\.in)$/i
+                        .test(email)
+                ) {
+
+                    showNotification(
+
+                        "Use valid email domains only.",
+
+                        "error"
+
+                    );
+
+                    return;
+
+                }
+
+
+                if (city.length < 3) {
+
+                    showNotification(
+                        "Enter valid city name.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+
+                // LOCAL STORAGE
+
+                let customers =
+                    JSON.parse(
+
+                        localStorage.getItem(
+                            "customerDashboard"
+                        )
+
+                    ) || [];
+
+
+
+                const newCustomer = {
+
+                    id:
+                        customers.length > 0
+                            ?
+                            Math.max(
+                                ...customers.map(c => c.id)
+                            ) + 1
+                            :
+                            1,
+
+                    name: name,
+
+                    phone: phoneNumber,
+
+                    email: email,
+
+                    city: city,
+
+                    status: status
+
+                };
+
+
+                customers.push(
+                    newCustomer
+                );
+
+
+                localStorage.setItem(
+
+                    "customerDashboard",
+
+                    JSON.stringify(
+                        customers
+                    )
+
+                );
+
+
+                showNotification(
+                    "Customer Added Successfully."
+                );
+
+
+                // REDIRECT
+
+                setTimeout(() => {
+
+                    window.location.href =
+                        "comt.html";
+
+                }, 1500);
+
+
+            });
+
+
+        // CANCEL BUTTON
+
+        cancelBtn.addEventListener(
+            "click",
+            () => {
+
+                window.location.href =
+                    "comt.html";
+
+            });
+
+    </script>
+
+</body>
+
+</html>
